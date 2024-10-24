@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("fundo.jpg"); 
+        height: 700px;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+    }
+
+    form {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 600px;
+        width: 100%;
+        margin-top: 10%;
+        background-image: url(amarelo.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        color: #ffffff;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #eba63f;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+    }
+
+    td {
+        border-bottom: 1px solid #ffffff;
+    }
+
+    input[type="checkbox"] {
+        margin-right: 10px;
+    }
+
+    select {
+        padding: 5px;
+        font-size: 14px;
+        border-radius: 5px;
+        border: 1px solid #fcda91;
+        background-color: #fcda91;
+    }
+
+    textarea {
+        width: 100%;
+        height: 60px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        resize: none;
+    }
+
+    input[type="submit"] {
+        background-color: #ca851e;
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+</style>
+
+<body>
+    <form method="post" action="Comprovante.php">
+        <h1>Hora do Lanche - Cardapio</h1>
+        <table>
+            <tr>
+                <th>Lanches</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="XBurguer">X-Burguer</td>
+                <td>
+                    <select name="Quantidade1">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+                <td>R$ 8,50</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="XSalada">X-Salada</td>
+                <td>
+                    <select name="Quantidade2">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+                <td>R$ 7,60</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="Xtudo">X-tudo</td>
+                <td>
+                    <select name="Quantidade3">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+                <td>R$ 10,50</td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Bebidas</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="Coca">Coca-Cola</td>
+                <td>
+                    <select name="Quantidade4">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+                <td>R$ 9,60</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="Conquista">Conquista</td>
+                <td>
+                    <select name="Quantidade5">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+                <td>R$ 7,50</td>
+            </tr>
+
+            <tr>
+                <td><input type="checkbox" name="Fanta">Fanta</td>
+                <td>
+                    <select name="Quantidade6">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+                <td>R$ 8,20</td>
+            </tr>
+        </table>
+        <br>
+        <label><strong>Observações:</strong></label>
+        <br>
+        <textarea name="obs"></textarea>
+
+        <br><br>
+        <input type="submit" value="Enviar Pedido">
+
+    </form>
+</body>
+
+</html>
